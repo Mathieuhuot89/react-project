@@ -1,0 +1,68 @@
+.food{
+    border: 1px solid rgb(216, 215, 215);
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    border-radius: 5px;
+    width: 210px;
+}
+.title{
+    border-bottom: 1px solid rgb(216, 215, 215);
+    padding-bottom: 6px;
+    font-weight: 500;
+  }
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+.card-img{
+    height: 230px;
+    padding-top: 20px;
+}
+
+.containerFoodBoxes{ 
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+.menu-bar{
+    padding-bottom: 50px;
+}
+.menu-bar h1{
+    padding: 2em 0 1em 0;
+}
+
+@media screen and (max-width: 850px) {
+    .card {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        flex-wrap: wrap;
+        width: auto;
+    }
+    .card-img{
+        height: 180px;
+        padding-top: 15px;
+    }
+
+    .menu-bar h1{
+        padding: 1.5em 0 .7em 0;
+    }
+
+    .title{
+        border-bottom: 1px solid rgb(216, 215, 215);
+        padding-bottom: 3px;
+        font-weight: 300;
+      }
+}

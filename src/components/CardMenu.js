@@ -1,4 +1,4 @@
-import pizza from '../assets/pizza.jpg';
+import izza from '../assets/pizza.jpg';
 import salad from '../assets/salad_thon.jpg';
 import burger from '../assets/burger.jpg';
 import chicken from '../assets/chicken_dish.jpg';

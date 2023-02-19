@@ -5,7 +5,7 @@ import Food from '../components/Food'
 import { CardMenu } from '../components/CardMenu';
 import "../components/FoodStyles.css";
 import { useState } from 'react';
-import AddFood from '../components/addFood';
+import AddFood from '../components/AddFood';
 
 function Menu() {
   const [foods, setFoods] = useState(CardMenu)

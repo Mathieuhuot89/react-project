@@ -4,7 +4,7 @@ import Welcome from '../components/Welcome'
 function Home() {
 
   return (
-    <>
+    <>\
     <Navbar />
     <Welcome    
         cName= 'welcome'

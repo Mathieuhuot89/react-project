@@ -14,30 +14,33 @@ function AddFood({setFoods}) {
         ...newFood,
         [e.target.name]: e.target.value
     })}
+
     const handleSubmit = (e) => {
     e.preventDefault()
     setFoods((foods)=>{
         let buff = [...foods]
         buff.unshift(newFood)
         return buff
+        
     })
     }
-    // const [isDisplay, setIsDisplay] = useState(true)
-    // const handleIsDisplay = (e) => {
-    //     if(isDisplay){
-    //         setIsDisplay(false)
-    //         e.target.innerText = 'Add New Food'
-    //     }
-    //     else{
-    //         setIsDisplay(true)
-    //         e.target.innerText = 'Hide Form'
-    //     }
-    // }
-    // Possible de faire du ternaire avec plusieurs intructions ?
+    const [isDisplay, setIsDisplay] = useState(true)
+
+    const handleIsDisplay = (e) => {
+        if(isDisplay){
+            setIsDisplay(false)
+            e.target.innerText = 'Hide Form'
+        }
+        else{
+            setIsDisplay(true)
+            e.target.innerText = 'Add New Food'
+        }
+    }
+    
   return (
     <div className='AddFood'>
         
-        <form onSubmit={handleSubmit}>
+        <form style={isDisplay ? {display: 'none'}: {display: 'flex'}} onSubmit={handleSubmit}>
         <h2>Add Food</h2>
             <label>Name</label>
             <input type='text' value={newFood.name} name='name' onChange={handleNewFood}></input>
@@ -50,7 +53,7 @@ function AddFood({setFoods}) {
             
             <button type='submit'>Create</button>
         </form>
-        
+        <button style={{width: 120,height: 40}} onClick={handleIsDisplay} >Add new food</button>
     </div>
   )
 }
